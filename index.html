@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography</title>
+    <style>
+      body {
+        background: rgb(19, 64, 126);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid rgb(19, 64, 126);
+        background: white;
+        font-size: 20x;
+        border-radius: 6px;
+        padding: 10px 15px;
+      }
+
+      button:hover {
+        background: rgb(19, 64, 126);
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        color: white;
+        font-size: 18px;
+      }
+
+      .container {
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+      }
+
+      .theme-button {
+        font-size: 15px;
+        background: #2e2a2c;
+        color: white;
+        padding: 5px 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+
+      .intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.05);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 8px;
+      }
+
+      .grid img {
+        border-radius: 5px;
+        aspect-ratio: 1/2;
+        width: 100%;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+
+      .dark {
+        background: rgb(2, 11, 40);
+        color: aliceblue;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>The Art of Photography</h1>
+      <h2>Pictures that tell stories</h2>
+      <a href="https://en.wikipedia.org/wiki/Photography" target="_blank"
+        ><img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/674/original/markus-spiske-EfhOW3cYqD8-unsplash.jpg?1723849537"
+          alt=""
+          class="intro-picture"
+      /></a>
+
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/672/original/madalena-veloso-jwkzIauE4vI-unsplash.jpg?1723849518"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/673/original/mae-mu-9z-veIxii6k-unsplash.jpg?1723849527"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/670/original/avi-richards-K_IJFxmG2hg-unsplash.jpg?1723849494"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/671/original/haniel-espinal-pVgEjRvIjRQ-unsplash.jpg?1723849509"
+          alt=""
+        />
+      </div>
+
+      <p>
+        Photography is a powerful tool that can be used to document history,
+        explore different cultures, and inspire others. From photojournalism to
+        fine art, photography has the ability to shape the way we see the world.
+        <br />
+        <br />
+
+        <a href="https://en.wikipedia.org/wiki/Photography">
+          <strong>Read more on Wikipedia!</strong>
+        </a>
+      </p>
+      <button>Learn photography</button>
+    </div>
+
+    <footer>Coded by Ingrid F. P. de Souza</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
